@@ -18,8 +18,8 @@ app.use(express.json()); // => allows us to access the req.body
 if (process.env.NODE_ENV === "production") {
   //server static content
   //npm run build
-  // app.use(express.static(path.join(__dirname, "client/build")));
-  app.use(express.static(path.join(__dirname, "client/src/index.html")));
+  app.use(express.static(path.join(__dirname, "client/build")));
+  // app.use(express.static(path.join(__dirname, "client/src/index.html")));
 }
 
 console.log(__dirname);
